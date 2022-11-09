@@ -3,5 +3,4 @@
 - Michael Ifeanyi
 - Akeem Abiodun
 - Ojukwu Shiela
-- Ani Nkemjika
 - Favour Joseph
