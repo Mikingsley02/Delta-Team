@@ -6,7 +6,7 @@
 - Favour Joseph
 
 **Colaborators:**
-Eliel Godsent
+Eliel Godsent and 
 Sophia Abubakar
 
 Links to project resources:
