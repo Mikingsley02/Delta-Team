@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:\Users\USER\Downloads\mental_health.sqlite" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="849"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,8:mainQuestion"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Answer" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="86"/><column index="2" value="68"/><column index="3" value="51"/><column index="4" value="79"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Question" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="300"/><column index="2" value="75"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Survey" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="68"/><column index="2" value="178"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">SELECT * FROM Question WHERE questiontext = &quot;How willing would you be to share with friends and family that you have a mental illness?&quot;;
+SELECT * FROM Answer WHERE answertext = &quot;Neutral&quot; AND questionid = 30;
+SELECT * FROM Answer WHERE Answertext = &quot;Not applicable to me (I do not have a mental illness)&quot; AND Questionid =30;
+SELECT * FROM Answer WHERE Answertext = &quot;Not open at all&quot; AND Questionid = 30;
+SELECT * FROM Answer WHERE Answertext = &quot;Somewhat not open&quot; AND Questionid = 30;
+SELECT * FROM Answer WHERE Answertext = &quot;Somewhat open&quot; AND Questionid = 30;
+SELECT * fROM Answer WHERE Answertext = &quot;Very open&quot; AND Questionid = 30;
+SELECT * FROM Answer WHERE Answertext != &quot;Somewhat not open&quot; AND AnswerText != &quot;Neutral&quot; AND Answertext != &quot;Not applicable to me (I do not have a mental illness)&quot; AND Answertext != &quot;Not open at all&quot; AND Questionid = 30;
+SELECT * FROM Answer WHERE Answertext != &quot;Somewhat open&quot; AND Answertext != &quot;Very open&quot; AND Questionid = 30;
+
+
+SELECT * FROM Question WHERE Questiontext = &quot;Have your observations of how another individual who discussed a mental health disorder made you less likely to reveal a mental health issue yourself in your current workplace?&quot;;
+SELECT * FROM Answer WHERE Answertext = &quot;Yes&quot; AND Questionid =31;
+SELECT * FROM Answer WHERE Answertext = &quot;No&quot; AND Questionid = 31;
+SELECT * FROM Answer WHERE Answertext = &quot;Maybe&quot; AND Questionid = 31;
+SELECT * FROM Answer WHERE Answertext != &quot;No&quot; AND Answertext != &quot;-1&quot; And Questionid = 31;
+
+SELECT * FROM Question WHERE Questiontext = &quot;Have you had a mental health disorder in the past?&quot;;
+SELECT * FROM Answer WHERE Answertext = &quot;Yes&quot; AND Questionid = 32;
+SELECT * FROM Answer WHERE Answertext = &quot;No&quot; AND Questionid = 32;
+SELECT * FROM Answer WHERE Answertext != &quot;Yes&quot; AND Answertext != &quot;No&quot; AND Questionid = 32;
+
+SELECT * FROM Question WHERE Questiontext = &quot;Do you currently have a mental health disorder?&quot;;
+SELECT * FROM Answer WHERE Answertext = &quot;Yes&quot; AND Questionid = 33;
+SELECT * FROM Answer WHERE Answertext = &quot;No&quot; AND Questionid = 33;
+SELECT * FROM Answer WHERE Answertext != &quot;Yes&quot; AND Answertext != &quot;No&quot; And Questionid = 33;
+
+
+SELECT * FROM Question WHERE Questiontext = &quot;Have you ever been diagnosed with a mental health disorder?&quot;;
+SELECT * FROM Answer WHERE Answertext = &quot;Yes&quot; AND Questionid = 34;
+SELECT * FROM Answer WHERE Answertext = &quot;No&quot; AND Questionid = 34;
+SELECT * FROM Answer WHERE Answertext != &quot;Yes&quot; AND Answertext != &quot;No&quot; And Questionid = 34;
+
+SELECT * FROM Question WHERE Questiontext = &quot;If you have a mental health disorder, how often do you feel that it interferes with your work when being treated effectively?&quot;;
+SELECT * FROM Answer WHERE answertext = &quot;Never&quot; AND questionid = 48;
+SELECT * FROM Answer WHERE Answertext = &quot;Not applicable to me&quot; AND Questionid =48;
+SELECT * FROM Answer WHERE Answertext = &quot;Often&quot; AND Questionid = 48;
+SELECT * FROM Answer WHERE Answertext = &quot;Rarely&quot; AND Questionid = 48;
+SELECT * FROM Answer WHERE Answertext = &quot;Sometimes&quot; AND Questionid = 48;
+SELECT * FROM Answer WHERE Answertext != &quot;Sometimes&quot; AND AnswerText != &quot;Often&quot; AND Answertext != &quot;Rarely&quot; AND Questionid = 48;
+SELECT * FROM Answer WHERE Answertext != &quot;Never&quot; AND Answertext != &quot;Not applicable to me&quot; AND Questionid = 48;
+
+SELECT * FROM Question WHERE Questionid = &quot;If you have a mental health disorder, how often do you feel that it interferes with your work when not being treated effectively (i.e., when you are experiencing symptoms)?&quot;;
+SELECT * FROM Answer WHERE answertext = &quot;Never&quot; AND questionid = 49;
+SELECT * FROM Answer WHERE Answertext = &quot;Not applicable to me&quot; AND Questionid =49;
+SELECT * FROM Answer WHERE Answertext = &quot;Often&quot; AND Questionid = 49;
+SELECT * FROM Answer WHERE Answertext = &quot;Rarely&quot; AND Questionid = 49;
+SELECT * FROM Answer WHERE Answertext = &quot;Sometimes&quot; AND Questionid = 49;
+SELECT * FROM Answer WHERE Answertext != &quot;Sometimes&quot; AND AnswerText != &quot;Often&quot; AND Answertext != &quot;Rarely&quot; AND Questionid = 49;
+SELECT * FROM Answer WHERE Answertext != &quot;Never&quot; AND Answertext != &quot;Not applicable to me&quot; AND Questionid = 49;
+
+
+SELECT * FROM Question WHERE Questiontext = &quot;What country do you work in?&quot;;
+SELECT * FROM Answer WHERE Answertext = &quot;Australia&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;South Africa&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Nigeria&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Mauritius&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Swaziland&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Botswana&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Eritrea&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Ethopia&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Ghana&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Kenya&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Austria&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Belgium&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Bosnia And Herzegovina&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Bulgaria&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Croatia&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Norway&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Czech republic&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Denmark&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Estonia&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;France&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Finland&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Germany&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Greece&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Hungary&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Lativa&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Iceland&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Luxembourg&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Macedonia&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Netherland&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Poland&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Switzerland&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Portugal&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Romania&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Serbia&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Slovakia&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Spain&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Sweden&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Afghanistan&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Bangladesh&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;China&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Hong Kong&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;India&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Indonesia&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Saudi Arabia&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Iran&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Isreal&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Japan&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Jordan&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Parkistan&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Russia&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Singapore&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Ukraine&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;United Arab Emirate&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Argentina&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Brazil&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Chile&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Colombia&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Ecuado&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Uruguay&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Venezula&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Canada&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Costa Rica&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Guatemala&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Mexico&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;United States of America&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Georgia&quot; AND Questionid = 50;
+SELECT * FROM Answer WHERE Answertext = &quot;Turkey&quot; AND Questionid = 50;
+
+SELECT * FROM Question WHERE Questiontext = &quot;What US state or territory do you work in?&quot;;
+SELECT * FROM Answer WHERE Answertext != &quot;-1&quot; AND Questionid = 51; 
+
+SELECT * FROM Question WHERE Questiontext = &quot;If you have been diagnosed or treated for a mental health disorder, do you ever reveal this to clients or business contacts?&quot;;
+SELECT * FROM Answer WHERE Answertext = &quot;Yes, always&quot; AND Questionid = 52;
+SELECT * FROM Answer WHERE Answertext = &quot;No, because it would impact me negatively&quot; AND Questionid = 52;
+SELECT * FROM Answer WHERE Answertext != &quot;Yes always&quot; AND Answertext != &quot;No, because it would impact me negatively&quot; AND Questionid = 52;
+
+SELECT * FROM Question WHERE Questiontext = &quot;If yes, what percentage of your work time (time performing primary or secondary job functions) is affected by a mental health issue?&quot;;
+SELECT * FROM Answer WHERE Answertext = &quot;-1&quot; AND Questionid = 55;
+SELECT * FROM Answer WHERE Answertext = &quot;1-25%&quot; AND Questionid = 55;
+SELECT * FROM Answer WHERE Answertext = &quot;26-50%&quot; AND Questionid = 55;
+SELECT * FROM Answer WHERE Answertext != &quot;-1&quot; AND Answertext != &quot;1-25%&quot; AND Answertext != &quot;26-50&quot; AND Questionid = 55;
+
+SELECT * FROM Question WHERE Questiontext = &quot;Have you observed or experienced an unsupportive or badly handled response to a mental health issue in your current or previous workplace?&quot;;
+SELECT * FROM Answer WHERE Answertext = &quot;Yes&quot; AND Questionid = 56;
+SELECT * FROM Answer WHERE Answertext = &quot;No&quot; AND Questionid = 56;
+SELECT * FROM Answer WHERE Answertext != &quot;Yes&quot; AND Answertext != &quot;No&quot; And Questionid = 56;
+
+
+
+SELECT * FROM Question WHERE Questiontext = &quot;Would you feel more comfortable talking to your coworkers about your physical health or your mental health?&quot;;
+SELECT * FROM Answer WHERE Answertext = &quot;Yes&quot; AND Questionid = 57;
+SELECT * FROM Answer WHERE Answertext = &quot;No&quot; AND Questionid = 57;
+SELECT * FROM Answer WHERE Answertext != &quot;Yes&quot; AND Answertext != &quot;No&quot; And Questionid = 57;
+
+SELECT * FROM Question WHERE Questiontext = &quot;Overall, how much importance does your employer place on mental health?&quot;;
+SELECT * FROM Answer WHERE Answertext  &lt; 5 AND Questionid = 64;
+SELECT * FROM Answer WHERE Answertext &gt; 5 AND Questionid = 64;
+SELECT * FROM Answer WHERE Answertext = &quot;5&quot; And Questionid = 64;
+
+SELECT * FROM Question WHERE Questiontext = &quot;Overall, how much importance does your employer place on mental health?&quot;;
+SELECT * FROM Answer WHERE Answertext  &lt; 5 AND Questionid = 65;
+SELECT * FROM Answer WHERE Answertext &gt; 5 AND Questionid = 65;
+SELECT * FROM Answer WHERE Answertext = &quot;5&quot; AND Questionid = 65;
+
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
