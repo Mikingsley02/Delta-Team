@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/HP/Downloads/mental_health (4).sqlite" readonly="0" foreign_keys="0" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="0" synchronous="1"/><attached/><window><main_tabs open="browser structure pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="1333"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,8:mainQuestion"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Answer" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="111"/><column index="2" value="132"/><column index="3" value="106"/><column index="4" value="108"/></column_widths><filter_values><column index="4" value="118"/></filter_values><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Question" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="300"/><column index="2" value="101"/></column_widths><filter_values><column index="2" value="118"/></filter_values><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Survey" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="108"/><column index="2" value="275"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">SELECT * FROM Question WHERE questiontext = &quot;What is your age?&quot;;
+SELECT * FROM Answer WHERE AnswerText &gt;= 18 AND questionid = 1;
+SELECT * FROM Answer WHERE AnswerText &lt; 18 AND questionid = 1;
+
+
+SELECT * FROM Question WHERE questiontext = &quot;Do you have a family history of mental illness?&quot; AND questionid = 6;
+SELECT * FROM Answer WHERE AnswerText = &quot;Yes&quot; AND questionid = 6;
+SELECT * FROM Answer WHERE AnswerText = &quot;No&quot; AND questionid = 6;
+SELECT * FROM Answer WHERE AnswerText != &quot;Yes&quot; AND AnswerText != &quot;No&quot; AND questionid = 6;
+
+
+
+
+
+SELECT * FROM Question WHERE questiontext = &quot;Are you self-employed?&quot;;
+SELECT * FROM Answer WHERE AnswerText = 5;
+SELECT * FROM Answer WHERE AnswerText = &quot;Yes&quot;;
+SELECT * FROM Answer WHERE AnswerText = &quot;No
+
+SELECT * FROM Question WHERE questiontext = &quot;If there is anything else you would like to tell us that has not been covered by the survey questions, please use this space to do so.&quot; AND questionid = 
+87;
+SELECT * FROM Answer WHERE AnswerText != -1 AND questionid = 87;
+
+
+
+
+ 
+</sql><sql name="SQL 3">SELECT * FROM Answer WHERE AnswerText != -1 AND AnswerText LIKE 'No%' AND questionid = 87;
+
+SELECT * FROM Answer WHERE AnswerText = &quot;no&quot; AND questionid = 90;
+
+</sql><sql name="SQL 4">SELECT * FROM Answer WHERE AnswerText != -1 AND AnswerText LIKE 'No%' AND questionid = 87;
+
+SELECT * FROM Answer WHERE AnswerText = &quot;no&quot; AND questionid = 91;
+SELECT * FROM Answer WHERE AnswerText != &quot;Don't know&quot; AND questionid = 91;
+
+SELECT * FROM Question WHERE questiontext = &quot;If you have a mental health condition, do you feel that it interferes with your work?&quot;
+SELECT * FROM Answer WHERE answertext != -1 AND questionid = 92;
+
+SELECT * FROM Question WHERE questiontext = &quot;Do you work remotely (outside of an office) at least 50% of the time?&quot;
+SELECT * FROM Answer WHERE AnswerText = &quot;No&quot; AND questionid = 93;
+SELECT * FROM Answer WHERE AnswerText = &quot;Yes&quot; AND questionid = 93;
+
+SELECT * FROM Question WHERE questiontext = &quot;Do you know the options for mental health care your employer provides?&quot;
+SELECT * FROM Answer WHERE answertext like &quot;No%&quot; AND questionid = 94;
+SELECT * FROM Answer WHERE AnswerText = &quot;Yes&quot; AND questionid = 94;
+
+SELECT * FROM Question WHERE questiontext = &quot;Has your employer ever discussed mental health as part of an employee wellness program?&quot;
+SELECT * FROM Answer WHERE AnswerText = &quot;Yes&quot; AND questionid = 95;
+SELECT * FROM Answer WHERE AnswerText = &quot;No&quot; AND questionid = 95;
+SELECT * FROM Answer WHERE AnswerText = &quot;Don't know&quot; AND questionid = 95;
+
+SELECT * FROM Question WHERE questiontext = &quot;Does your employer provide resources to learn more about mental health issues and how to seek help?&quot;
+SELECT * FROM Answer WHERE AnswerText = &quot;Yes&quot; AND questionid = 96;
+SELECT * FROM Answer WHERE AnswerText = &quot;No&quot; AND questionid = 96;
+SELECT * FROM Answer WHERE AnswerText = &quot;Don't know&quot; AND questionid = 96;
+
+SELECT * FROM Question WHERE questiontext = &quot;How easy is it for you to take medical leave for a mental health condition?&quot;
+SELECT * FROM Answer WHERE AnswerText like &quot;very%&quot; AND questionid = 97;
+SELECT * FROM Answer WHERE AnswerText like &quot;somewhat%&quot; AND questionid = 97;
+SELECT * FROM Answer WHERE AnswerText = &quot;Don't know&quot; AND questionid = 97;
+
+SELECT * FROM Question WHERE questiontext = &quot;Do you think that discussing a mental health issue with your employer would have negative consequences?&quot;
+SELECT * FROM Answer WHERE AnswerText = &quot;Maybe&quot; AND questionid = 98;
+SELECT * FROM Answer WHERE AnswerText = &quot;Yes&quot; AND questionid = 98;
+SELECT * FROM Answer WHERE AnswerText = &quot;No&quot; AND questionid = 98;
+
+SELECT * FROM Question WHERE questiontext = &quot;Would you be willing to discuss a mental health issue with your coworkers?&quot;
+SELECT * FROM Answer WHERE AnswerText = &quot;Yes&quot; AND questionid = 99;
+SELECT * FROM Answer WHERE AnswerText = &quot;No&quot; AND questionid = 99;
+SELECT * FROM Answer WHERE AnswerText like &quot;Some%&quot; AND questionid = 99;
+
+SELECT * FROM Question WHERE questiontext = &quot;Would you bring up a physical health issue with a potential employer in an interview?&quot;
+SELECT * FROM Answer WHERE AnswerText = &quot;Yes&quot; AND questionid = 101;
+SELECT * FROM Answer WHERE AnswerText = &quot;No&quot; AND questionid = 101;
+SELECT* FROM Answer WHERE AnswerText = &quot;Maybe&quot; AND questionid = 101;
+
+SELECT * FROM Question WHERE questiontext =&quot;Have you heard of or observed negative consequences for coworkers with mental health conditions in your workplace?&quot;
+SELECT * FROM Answer WHERE AnswerText = &quot;No&quot; AND questionid = 102;
+SELECT * FROM Answer WHERE AnswerText = &quot;Yes&quot; AND questionid = 102;
+
+SELECT * FROM Question WHERE questiontext = &quot;Any additional notes or comments&quot;
+SELECT * FROM Answer WHERE AnswerText != -1 AND questionid = 103;
+
+SELECT * FROM Question WHERE questiontext = &quot;Have you heard of or observed negative consequences for co-workers who have been open about mental health issues in your workplace?&quot;
+
+SELECT * FROM Answer WHERE AnswerText != -1 AND questionid = 105;
+
+SELECT * FROM Question WHERE questiontext = &quot;If you have revealed a mental health issue to a client or business contact, do you believe this has impacted you negatively?&quot;
+SELECT * FROM Answer WHERE AnswerText != -1 AND questionid = 106;
+
+SELECT * FROM Question WHERE questiontext = &quot;If you have revealed a mental health issue to a coworker or employee, do you believe this has impacted you negatively?&quot;
+SELECT * FROM Answer WHERE AnswerText != -1 AND questionid = 107;
+
+SELECT * FROM Question WHERE questiontext = &quot;Do you think that discussing a mental health disorder with previous employers would have negative consequences?&quot;
+SELECT * FROM Answer WHERE AnswerText != -1 AND questionid = 108;
+
+SELECT * FROM Question WHERE questiontext = &quot;Would you have been willing to discuss a mental health issue with your previous co-workers?&quot;
+SELECT * FROM Answer WHERE AnswerText != -1 AND questionid = 110;
+
+SELECT * FROM Question WHERE questiontext = &quot;Did you feel that your previous employers took mental health as seriously as physical health?&quot;
+SELECT * FROM Answer WHERE AnswerText != -1 AND questionid = 111;
+
+SELECT * FROM Question WHERE questiontext = &quot;Did you hear of or observe negative consequences for co-workers with mental health issues in your previous workplaces?&quot;
+SELECT * FROM Answer WHERE AnswerText != -1 AND questionid = 112;
+
+SELECT * FROM Question WHERE questiontext = &quot;Do you feel that being identified as a person with a mental health issue would hurt your career?&quot;
+SELECT * FROM Answer WHERE AnswerText like &quot;Yes%&quot; AND questionid = 113;
+SELECT * FROM Answer WHERE AnswerText like &quot;No%&quot; AND questionid = 113;
+SELECT * FROM Answer WHERE AnswerText = &quot;Maybe&quot; AND questionid = 113;
+
+SELECT * FROM Question WHERE questiontext = &quot;Do you think that team members/co-workers would view you more negatively if they knew you suffered from a mental health issue?&quot;
+SELECT * FROM Answer WHERE AnswerText like &quot;Yes%&quot; AND questionid = 114;
+SELECT * FROM Answer WHERE AnswerText like &quot;No%&quot; AND questionid = 114;
+SELECT * FROM Answer WHERE AnswerText = &quot;Maybe&quot; AND questionid = 114;
+
+SELECT * FROM Question WHERE questiontext = &quot;If yes, what condition(s) have you been diagnosed with?&quot;
+SELECT * FROM Answer WHERE AnswerText != -1 AND questionid = 115;
+
+SELECT * FROM Question WHERE questiontext = &quot;If maybe, what condition(s) do you believe you have?&quot;
+SELECT * FROM Answer WHERE AnswerText != -1 AND questionid = 116;
+
+SELECT * FROM Question WHERE questiontext = &quot;Which of the following best describes your work position?&quot;
+SELECT * FROM Answer WHERE AnswerText != &quot;others&quot; AND questionid = 117;
+
+SELECT * FROM Question WHERE questiontext = &quot;Do you work remotely?&quot;
+SELECT * FROM Answer WHERE AnswerText = &quot;Sometimes&quot; AND questionid = 118;
+SELECT * FROM Answer WHERE AnswerText = &quot;Always&quot; AND questionid = 118;
+SELECT * FROM Answer WHERE AnswerText = &quot;Never&quot; AND questionid = 118;
+
+
+
+
+</sql><current_tab id="2"/></tab_sql></sqlb_project>
